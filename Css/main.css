@@ -1,0 +1,1120 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Slabo 27px', serif;
+}
+
+.container
+{
+    width:80%;
+    margin:auto;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+hr
+{
+    height:0;
+    border-top: 0 solid #CCC;
+    margin-top: -28px;
+}
+
+/* start header */
+
+header
+{
+    background: #222;
+    overflow: hidden;
+    color:#F2F2F2;
+
+}
+
+header div.logo
+{
+    float:left;
+    line-height: 40px;
+    cursor: default;
+
+}
+
+header label
+{
+    font-size: 26px;
+    text-align: right;
+    float: right;
+    margin-top: 28px;
+    display:none;
+}
+
+#mobile 
+{
+    display: none;
+}
+
+header div.logo h1 span
+{
+    color:#ffce00;
+}
+
+
+
+header nav
+{
+    float:right;
+}
+
+header nav ul
+{
+    padding:0;
+    margin: 0;
+    list-style: none;
+    line-height: 80px;
+
+}
+
+header nav ul li
+{
+    display:inline-block;
+    padding:0 15px;
+    font-size:20px;
+
+}
+
+header nav ul li a
+{
+    color:#fff;
+    padding-bottom: 10px;
+    
+}
+
+
+header nav ul li a:after
+{
+    content:"";
+    height:2px;
+    width:0;
+    background: #ffce00;
+    display:block;
+    transition: width 0.3s ;
+    margin-top: -21px;
+}
+
+header nav ul li a:hover::after{width:100%;}
+
+header nav ul li a:hover{color:#CCC;}
+
+
+/* End header */
+
+
+/* start slider */
+
+section.slider
+{
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%,rgba(0, 0, 0, 0.6) 100%), url(../Images/Slider.jpg) no-repeat center;
+    background:linear-gradient(top, rgba(227, 0, 0, 0.8) 0%,rgba(220, 0, 0, 0.7) 100%);
+    max-height:600px;
+    min-height: 600px;
+    background-size: cover;
+    position: relative;
+}
+
+
+section.slider div.slider-content
+{
+    color:#F6F6F6;
+    margin: 0;
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,-66%);
+    width:100%;
+    text-align: center;    
+}
+
+section.slider div.slider-content p
+{
+    font-size:48px;
+    margin: 0;
+    line-height: 1.6
+}
+
+section.slider div.slider-content p span
+{
+    color:#ffce00;
+}
+
+section.slider div.slider-content button
+{
+    background:none;
+    padding:12px 32px;
+    border:1px solid #FFCE00;
+    color:#F6F6F6;
+    font-size: 27px;
+    margin-top: 23px;
+    outline: none;
+    position: relative;
+    border-radius: 5px;
+}
+
+section.slider div.slider-content button:before
+{
+    content:"";
+    width:0%;
+    height:100%;
+    background: #FFCE00;
+    position: absolute;
+    top:0;
+    left: 0; 
+    transition: all  0.4s;
+    z-index: -1;
+    
+}
+
+section.slider div.slider-content button:hover::before
+{
+    width:100%;   
+}
+
+section.slider div.slider-content button:hover
+{
+    color:#d00;
+    cursor: pointer;
+    transition-delay:0.1s;
+}
+
+
+/* end slider */
+
+
+
+/* start focus */
+
+section.focus
+{
+    min-height:550px;
+    background: #d00000;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+
+
+section.focus:before
+{
+    content:"";
+    background:url('../Images/wave-large-reversed.png') no-repeat center;
+    height:90px;
+    width:100%;
+    position: absolute;
+    top: 0;
+}
+
+
+
+section.focus div.focus-header 
+{
+    position: absolute;
+    color:#F9F9F9;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-145%);
+}
+
+section.focus div.focus-header h2
+{
+    font-size:48px;
+    position: relative;
+    cursor: default;
+}
+
+section.focus div.focus-header h2:after
+{
+    content:"";
+    height:3px;
+    background: #FFCE00;
+    width:40%;
+    display:block;
+    margin: auto;
+    transition: all 0.4s;
+}
+
+section.focus div.focus-header h2:hover::after{width:100%;}
+
+
+section.focus div.focus-cards
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top:212px;
+    margin: auto;    
+}
+
+div.focus-cards > div
+{
+    width:200px;
+    background-image:-webkit-linear-gradient(top,#ffce00 0%, #ffce00 50%, #ebebeb 50%, #ebebeb 100%); 
+    background-size: 200%;
+    -webkit-background-size: 200%;
+    flex:1;
+    margin-right: 50px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 0px rgba(0,0,0,0.5);
+    position: relative;
+    transition:all 0.9s;
+
+}
+
+div.focus-cards > div:hover
+{
+    background-position: -150% -100%;
+    cursor: default;
+    transform: scale(1.1);
+}
+
+
+
+div.focus-cards > div:hover::before
+{
+    height:100%;
+    transition: all 1s;
+}
+
+
+
+div.focus-cards > div:last-of-type
+{
+    margin-right: 0;
+}
+
+div.focus-cards > div h4
+{
+    font-weight: Bolder;
+    font-size: 25px;
+    color:#222;
+}
+
+div.focus-cards > div .icon
+{
+    color:#d00000;
+    width:47px;
+    height:47px;
+}
+
+div.focus-cards > div p
+{
+    padding:0 20px;
+    line-height: 1.7;
+    color:#222;
+}
+
+
+/* end focus */
+
+/* start teachers */
+
+section.teachers
+{
+    min-height:400px;
+    background: #d00000;
+    padding:40px 0;
+    padding-bottom: 60px;
+}
+
+section.teachers div.teachers-header
+{
+    text-align: center;
+    color:#F9F9F9;
+}
+
+section.teachers div.teachers-header h2
+{
+    margin: 0;
+    font-size: 48px;
+    padding:0 0 20px 0;
+    position: relative;
+    display: inline-block;
+    cursor: default;
+    margin-top: 40px;
+}
+
+section.teachers div.teachers-header h2:after
+{
+    content:"";
+    height:3px;
+    background: #ffce00;
+    width:40%;
+    display:block;
+    margin: auto;
+    transition: all 0.4s;
+}
+
+section.teachers div.teachers-header h2:hover::after{width:100%;}
+
+
+
+section.teachers div.teachers-cards
+{
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    flex:1;
+    justify-content: space-between;
+    padding:20px 0;
+}
+
+
+section.teachers div.teachers-cards > div
+{
+    width:266px;
+    height: 211px;
+    margin-right:20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 0px rgba(0,0,0,0.5);
+    padding: 20px 0;
+    position:relative;
+    margin: auto;   
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+section.teachers div.teachers-cards > div:hover
+{
+    transform: rotateY(180deg);
+}
+
+
+section.teachers div.teachers-cards > div div.front
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    height:100%;
+    width:100%;
+    background: #eee;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 8px;
+
+}
+
+section.teachers div.teachers-cards div.front div.img
+{
+    height: 111px;
+    width:140px;  
+    margin:15px auto 15px;
+}
+
+section.teachers div.teachers-cards div.front div.img img
+{
+    height:100%;
+    width:100%;
+    border-radius: 50%;
+}
+
+section.teachers div.teachers-cards div.front h4
+{
+    text-align: center;
+    margin-bottom: 8px;
+}
+section.teachers div.teachers-cards div.front span
+{
+    text-align: center;
+    color:#777 ;
+    display: block;
+    margin: auto;
+}
+
+section.teachers div.teachers-cards > div div.back
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    height:100%;
+    width:100%;
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+    transform: rotateY(180deg);
+    border-radius: 8px;
+
+}
+
+section.teachers div.teachers-cards div.teacherx div.back
+{
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%,rgba(0, 0, 0, 0.5) 100%), url(../Images/teacher1.jpeg) no-repeat center;
+    background-size: cover;
+}
+
+section.teachers div.teachers-cards div.teachery div.back
+{
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%,rgba(0, 0, 0, 0.5) 100%), url(../Images/teacher2.jpg) no-repeat center;
+    background-size: cover; 
+}
+
+section.teachers div.teachers-cards div.teacherz div.back
+{
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%,rgba(0, 0, 0, 0.5) 100%), url(../Images/teacher3.jpg) no-repeat center;
+    background-size: cover;    
+}
+
+
+section.teachers div.teachers-cards > div div.back div.icons
+{
+    text-align: center;
+    color:#F2F2F2;
+    margin-top: 100px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section.teachers div.teachers-cards > div div.back div.icons div.icon
+{
+    padding:0 6px;
+    font-size:30px;
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+section.teachers div.teachers-cards > div div.back div.icons div.face:hover{color:#3b5998}
+
+section.teachers div.teachers-cards > div div.back div.icons div.twitter:hover{color:#00acee}
+
+section.teachers div.teachers-cards > div div.back div.icons div.linked:hover{color: #0e76a8}
+
+
+/* end teachers */
+
+
+
+
+/* start Our Plans */
+
+section.plans
+{
+    min-height:400px;
+    background: #ffce00;
+    padding:20px 0 80px;
+}
+
+section.plans div.plans-header
+{
+    text-align: center;
+    color:#F9F9F9;
+}
+
+section.plans div.plans-header h2
+{
+    margin: 0;
+    font-size: 48px;
+    padding:0 0 20px 0;
+    position: relative;
+    display: inline-block;
+    cursor: default;
+    margin-top: 20px;
+}
+
+section.plans div.plans-header h2:after
+{
+    content:"";
+    height:3px;
+    background: #d00000;
+    width:40%;
+    display:block;
+    margin: auto;
+    transition: all 0.4s;
+}
+
+section.plans div.plans-header h2:hover::after{width:100%;}
+
+
+
+section.plans div.plans-cards
+{
+    display:flex;
+    flex-direction: row;
+    flex:1;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+section.plans div.plans-cards > div
+{
+    height:600px;
+    width:320px;
+    background: #fff;
+    position:relative;
+    overflow: hidden;
+    background:-webkit-linear-gradient(top, #fff 0% , #fff 50%, #d00000 50% , #d00000 100%);
+    background-size: 200%;
+    -webkit-background-size: 200%;
+    background-position: 50% 0%;
+    border-radius: 8px;
+    transition: all 1s;
+    box-shadow: 0 0 5px 0px rgba(0,0,0,0.5);
+    margin-right: 20px;
+
+}
+
+section.plans div.plans-cards > div:hover
+{
+    background-position: 50% -85%;
+}
+section.plans div.plans-cards > div:hover div.features
+{
+    color:#f2f2f2;
+    transition: all 0.1s;
+}
+
+section.plans div.plans-cards > div:hover div.feat{transition: all 1s;border-top: 1px solid #eee;}
+
+section.plans div.plans-cards > div:hover div.feat:last-of-type{transition: all 1s; border-bottom: 1px solid #eee;}
+
+section.plans div.plans-cards > div:hover h2.price{color:#f2f2f2;transition: all 1s;}
+
+section.plans div.plans-cards > div:hover button{background-position: -100.3% 0%;color:#333;transition: all 1s; cursor:pointer}
+
+section.plans div.plans-cards > div h3
+{
+    top:-100px;
+    position: absolute;
+    left:77px;
+    line-height: 236px;
+    background: #d00000;
+    text-align:center;
+    border-radius: 50%;
+    height:150px;
+    width:150px;
+    font-size: 26px;
+    color:#F6F6F6;
+    margin: 0;
+    padding: 0;
+}
+
+section.plans div.plans-cards > div div.features
+{
+    margin-top:80px;
+    text-align: center;
+    font-size: 18px;
+    color:#333;
+}
+
+section.plans div.plans-cards > div div.features div.icon
+{
+    float: left;
+    margin: 0 30px 0 30px;
+    line-height: 58px;
+}
+
+div.feat{overflow: hidden;border-top: 1px solid #ccc;}
+
+div.feat:last-of-type{border-bottom: 1px solid #ccc;}
+
+section.plans div.plans-cards > div div.features div.correct{color:#32CD32;}
+
+section.plans div.plans-cards > div div.features div.wrong{color:#f00}
+
+section.plans div.plans-cards > div div.features p{float: left;}
+
+section.plans div.plans-cards div.pro
+{
+    position: relative
+}
+
+section.plans div.plans-cards div.pro div.popular
+{
+    height: 30px;
+    width: 82px;
+    top: 13px;
+    right: -15px;
+    transform: rotate(47deg);
+    background: #444;
+    color: #F6F6F6;
+    position: absolute;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+section.plans div.plans-cards > div h2.price
+{
+    text-align: center;
+    color:#222;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+section.plans div.plans-cards > div button
+{
+    text-align: center;
+    margin: 30px auto;
+    padding:13px 47px;
+    border:1px solid #d00000;
+    outline: none;
+    display: block;
+    border-radius: 4px;
+    color:#f2f2f2;
+    font-size:20px;
+    font-weight: bolder;
+    background: -webkit-linear-gradient(left,#d00000 0%, #d00000 50%, #fff 50%, #fff 100% );  
+    background-size: 200%;
+    background-size: 200%;
+    background-position: -0.1% 0%;
+    transition: all 1s;
+}
+
+
+/* End Our Plans*/
+
+
+/* start Contact Us */
+
+section.contact
+{
+    min-height:555px;
+    background:-webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 100% ),
+    url(../Images/contact.jpg) no-repeat center;
+    padding:20px 0 50px;
+    background-size: cover;
+    background-position: 0% 0%;
+}
+
+section.contact div.contact-header
+{
+    text-align: center;
+    color:#F6F6F6;
+}
+
+section.contact div.contact-header h2
+{
+    margin: 0;
+    font-size: 48px;
+    padding:0 0 20px 0;
+    position: relative;
+    display: inline-block;
+    cursor: default;
+}
+
+section.contact div.contact-header h2:after
+{
+    content:"";
+    height:3px;
+    background: #ffce00;
+    width:40%;
+    display:block;
+    margin: auto;
+    transition: all 0.4s;
+}
+
+section.contact div.contact-header h2:hover::after{width:100%;}
+
+section.contact p
+{
+    text-align: center;
+    color:#F9F9F9;
+    font-size:28px;
+    margin-top: 0;
+    text-transform: capitalize;
+    
+}
+
+section.contact form {text-align: center;padding:0 10px;}
+
+section.contact form input , section.contact form textarea
+{
+    display:block;
+    margin:0 auto 15px;
+    width:40% ;
+    border: none;
+    outline: none;
+    transition: all 0.6s;
+}
+
+section.contact form input
+{
+
+    padding:10px;
+    color:#ccc;
+    background: none;
+    border-bottom: 1px solid #ffce00;
+
+}
+
+section.contact form input:focus
+{
+    width:44%;
+}
+
+section.contact form textarea
+{
+    height:150px;
+    resize: none;
+    background: none;
+    border:1px solid #ffce00;
+    color:#ccc;
+        
+}
+
+
+section.contact form button
+{
+    width:12%;
+    padding:10px 32px;
+    background: none;
+    color:#f9f9f9;
+    border: 1px solid #ffce00;
+    border-radius: 8px;
+    position: relative;
+    background: -webkit-linear-gradient(left,transparent 0%,transparent 50%, #ffce00 50%, #ffce00 100%);
+    background-size: 200%;
+    -webkit-background-size: 200%;
+    background-position: 0% 0%;
+    outline: none;
+    font-size:18px;
+    transition: background-position 1s;
+
+}
+
+section.contact form button:hover
+{
+    background-position: -100% 0%;
+    cursor: pointer;
+}
+
+
+
+/* End Contact Us */
+
+
+
+/* start footer */
+footer
+{
+    padding:10px;
+    background: #222;
+}
+
+footer p
+{
+    color:#eee;
+    text-transform: capitalize;
+}
+
+
+/* End Footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*start repsonsive */
+
+
+@media only screen and (max-width: 889px) and (min-width: 0px) 
+{
+
+    header label {display:block;}
+    header label:hover{cursor: pointer;}
+    
+    header nav 
+    {
+        width:100%;
+        padding-bottom: 15px;
+        display: none;
+    }
+            
+    header nav ul li 
+    {
+        display:block;
+        text-align: center;
+        line-height: 80px;
+    }
+    
+    #mobile:checked ~ nav
+    {
+        display: block;
+    }
+    
+    section.slider div.slider-content p
+{
+    font-size:32px;
+
+}
+
+    section.slider div.slider-content button
+{
+    padding:7px 22px;
+    font-size: 18px;
+}
+
+section.focus
+{
+    padding-bottom: 244px;
+    position: relative;
+}
+    section.focus:before
+{
+
+    display: none;
+}
+    
+section.focus div.focus-header 
+{
+    color:#F6F6F6;
+    position: absolute;
+    top:130px;
+    margin: 0;
+}
+    
+    section.focus div.focus-header h2
+    {
+        margin:0;
+    }
+
+
+    
+    section.focus div.focus-cards
+    {
+        display: block;
+        margin: auto;
+        width:100%;
+    }
+    
+
+div.focus-cards > div
+{
+    width:100%;
+    padding:10px;
+    margin-bottom: 30px;
+
+}
+    
+section.teachers div.teachers-cards
+{
+    display:flex;
+    flex-direction: column;    
+}
+    
+section.teachers div.teachers-cards > div
+    {
+        margin-bottom: 20px;
+        width:80%;
+    }
+       
+    section.plans div.plans-cards
+{
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+section.plans div.plans-cards > div
+    {
+        margin: 0 auto 20px;
+    }
+    
+section.contact form input , section.contact form textarea{width:80% ;}
+
+section.contact form input:focus{width:90%;}
+
+section.contact form button {width:52;}
+
+    
+}
+
+
+
+
+@media only screen and (max-width: 1111px) and (min-width: 890px)
+{
+    header nav ul 
+    {
+        text-align: right;
+    }
+    header nav ul li
+    {
+    padding:0 5px;
+    font-size:18spx;
+    }
+    
+    section.slider div.slider-content p
+{
+    font-size:40px;
+
+}
+
+    section.slider div.slider-content button
+{
+    padding:10px 26px;
+    font-size: 20px;
+}
+    section.focus
+{
+    padding-bottom: 244px;
+    position: relative;
+}
+    section.focus:before
+{
+
+    display: none;
+}
+    
+section.focus div.focus-header 
+{
+    color:#F6F6F6;
+    position: absolute;
+    top:130px;
+    margin: 0;
+}
+    
+    section.focus div.focus-header h2
+    {
+        margin:0;
+    }
+
+
+    
+    section.focus div.focus-cards
+    {
+        display: block;
+        margin: auto;
+        width:100%;
+    }
+    
+
+div.focus-cards > div
+{
+    width:100%;
+    padding:10px;
+    margin-bottom: 30px;
+
+}
+    
+    section.teachers div.teachers-cards
+{
+    display:flex;
+    flex-direction: column;    
+}
+    
+section.teachers div.teachers-cards > div
+    {
+        margin-bottom: 20px;
+        width:80%;
+    }
+    
+        section.plans div.plans-cards
+{
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+section.plans div.plans-cards > div
+    {
+        margin: 0 auto 20px;
+    }
+    
+    
+
+    
+}
+
+
+
+
+/* end responsive */
