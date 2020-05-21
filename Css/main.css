@@ -117,7 +117,7 @@ header nav ul li a:hover{color:#CCC;}
 
 section.slider
 {
-    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%,rgba(0, 0, 0, 0.6) 100%), url(../Images/Slider.jpg) no-repeat center;
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%,rgba(0, 0, 0, 0.6) 100%), url(../images/Slider.jpg) no-repeat center;
     background:linear-gradient(top, rgba(227, 0, 0, 0.8) 0%,rgba(220, 0, 0, 0.7) 100%);
     max-height:600px;
     min-height: 600px;
@@ -209,7 +209,7 @@ section.focus
 section.focus:before
 {
     content:"";
-    background:url('../Images/wave-large-reversed.png') no-repeat center;
+    background:url('../images/wave-large-reversed.png') no-repeat center;
     height:90px;
     width:100%;
     position: absolute;
@@ -451,19 +451,19 @@ section.teachers div.teachers-cards > div div.back
 
 section.teachers div.teachers-cards div.teacherx div.back
 {
-    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%,rgba(0, 0, 0, 0.5) 100%), url(../Images/teacher1.jpeg) no-repeat center;
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%,rgba(0, 0, 0, 0.5) 100%), url(../images/teacher1.jpeg) no-repeat center;
     background-size: cover;
 }
 
 section.teachers div.teachers-cards div.teachery div.back
 {
-    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%,rgba(0, 0, 0, 0.5) 100%), url(../Images/teacher2.jpg) no-repeat center;
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%,rgba(0, 0, 0, 0.5) 100%), url(../images/teacher2.jpg) no-repeat center;
     background-size: cover; 
 }
 
 section.teachers div.teachers-cards div.teacherz div.back
 {
-    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%,rgba(0, 0, 0, 0.5) 100%), url(../Images/teacher3.jpg) no-repeat center;
+    background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%,rgba(0, 0, 0, 0.5) 100%), url(../images/teacher3.jpg) no-repeat center;
     background-size: cover;    
 }
 
@@ -686,7 +686,7 @@ section.contact
 {
     min-height:555px;
     background:-webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 100% ),
-    url(../Images/contact.jpg) no-repeat center;
+    url(../images/contact.jpg) no-repeat center;
     padding:20px 0 50px;
     background-size: cover;
     background-position: 0% 0%;
@@ -1010,10 +1010,42 @@ section.contact form input , section.contact form textarea{width:80% ;}
 
 section.contact form input:focus{width:90%;}
 
-section.contact form button {width:52;}
+section.contact form button {width:52%;}
 
     
 }
+
+
+
+
+@media only screen and (max-width: 380px) and (min-width: 1px) 
+{
+    header div.logo h1
+    {
+        font-size: 25px;
+    }
+    
+section.focus div.focus-header h2 , section.teachers div.teachers-header h2 , section.plans div.plans-header h2 , section.contact div.contact-header h2
+    {
+        font-size: 40px;
+    }
+    
+    section.contact p
+    {
+        font-size: 22px;
+    }
+    
+    footer p
+    {
+        font-size: 12px;
+    }
+    section.plans div.plans-cards > div
+    {
+        margin: 0 -20px 20px;
+    }
+
+}
+
 
 
 
